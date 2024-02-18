@@ -1,0 +1,56 @@
+object Form2: TForm2
+  Left = 331
+  Height = 240
+  Top = 121
+  Width = 320
+  Caption = 'Form2'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '3.99.0.0'
+  OnCreate = FormCreate
+  object Panel1: TPanel
+    Left = 0
+    Height = 40
+    Top = 200
+    Width = 320
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 40
+    ClientWidth = 320
+    TabOrder = 0
+    object bClose: TButton
+      Left = 240
+      Height = 25
+      Top = 8
+      Width = 75
+      Anchors = [akTop, akRight]
+      Caption = 'Close'
+      ModalResult = 11
+      TabOrder = 0
+    end
+  end
+  object ScrollBox1: TScrollBox
+    Left = 0
+    Height = 200
+    Top = 0
+    Width = 320
+    HorzScrollBar.Page = 1
+    VertScrollBar.Page = 1
+    Align = alClient
+    ClientHeight = 196
+    ClientWidth = 316
+    TabOrder = 1
+    object FlowPanel1: TFlowPanel
+      Left = 0
+      Height = 196
+      Top = 0
+      Width = 316
+      Align = alClient
+      BevelOuter = bvNone
+      ControlList = <>
+      FlowLayout = tlTop
+      FlowStyle = fsLeftRightTopBottom
+      TabOrder = 0
+    end
+  end
+end

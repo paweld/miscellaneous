@@ -1,0 +1,198 @@
+object Form1: TForm1
+  Left = 331
+  Height = 313
+  Top = 121
+  Width = 853
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Form1'
+  ClientHeight = 313
+  ClientWidth = 853
+  Color = clSilver
+  LCLVersion = '3.99.0.0'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  object CalendarLite1: TCalendarLite
+    Left = 8
+    Height = 296
+    Top = 8
+    Width = 440
+    Constraints.MinHeight = 120
+    Constraints.MinWidth = 120
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    TabStop = True
+    Colors.TodayFrameColor = clGray
+    Date = 45334
+    DisplayTexts = '"Today is %s","mmm dd"", ""yyyy","Holidays in %d","There are no holidays set for %d","dddd"", "" mmm dd"", ""yyyy","mmmm yyyy"'
+    StartingDayOfWeek = dowMonday
+    WeekendDays = [dowSunday, dowSaturday]
+    OnDateChange = CalendarLite1DateChange
+    OnDrawCell = CalendarLite1DrawCell
+    OnHint = CalendarLite1Hint
+  end
+  object ecity: TEdit
+    Left = 576
+    Height = 23
+    Top = 48
+    Width = 264
+    TabOrder = 3
+  end
+  object Label2: TLabel
+    Left = 453
+    Height = 15
+    Top = 24
+    Width = 116
+    Caption = 'OpenWeather APIKey:'
+  end
+  object eapikey: TEdit
+    Left = 576
+    Height = 23
+    Top = 17
+    Width = 264
+    EchoMode = emPassword
+    PasswordChar = '#'
+    TabOrder = 1
+  end
+  object Label3: TLabel
+    Left = 576
+    Height = 15
+    Top = 88
+    Width = 19
+    Caption = 'Lat:'
+  end
+  object Label4: TLabel
+    Left = 712
+    Height = 15
+    Top = 88
+    Width = 23
+    Caption = 'Lon:'
+  end
+  object fselat: TFloatSpinEdit
+    Left = 600
+    Height = 23
+    Top = 80
+    Width = 96
+    DecimalPlaces = 7
+    TabOrder = 5
+  end
+  object fselon: TFloatSpinEdit
+    Left = 744
+    Height = 23
+    Top = 80
+    Width = 96
+    DecimalPlaces = 7
+    TabOrder = 6
+  end
+  object rbcity: TRadioButton
+    Left = 453
+    Height = 19
+    Top = 52
+    Width = 39
+    Caption = 'City'
+    Checked = True
+    TabOrder = 2
+    TabStop = True
+  end
+  object rbcoord: TRadioButton
+    Left = 453
+    Height = 19
+    Top = 84
+    Width = 82
+    Caption = 'Coordinates'
+    TabOrder = 4
+  end
+  object bGet: TButton
+    Left = 576
+    Height = 25
+    Top = 112
+    Width = 264
+    Caption = 'Get weather'
+    TabOrder = 7
+    OnClick = bGetClick
+  end
+  object Label1: TLabel
+    Left = 453
+    Height = 15
+    Top = 122
+    Width = 29
+    Caption = 'Lang:'
+  end
+  object cblang: TComboBox
+    Left = 488
+    Height = 23
+    Top = 114
+    Width = 81
+    ItemHeight = 15
+    ItemIndex = 0
+    Items.Strings = (
+      'English'
+      'Español'
+      'Polski'
+      'Українська'
+      '简体中文'
+    )
+    Style = csDropDownList
+    TabOrder = 8
+    Text = 'English'
+  end
+  object Image1: TImage
+    Left = 456
+    Height = 100
+    Top = 160
+    Width = 100
+    Stretch = True
+  end
+  object Label5: TLabel
+    Left = 560
+    Height = 15
+    Top = 152
+    Width = 34
+    Caption = 'Label5'
+  end
+  object Label6: TLabel
+    Left = 560
+    Height = 15
+    Top = 176
+    Width = 34
+    Caption = 'Label6'
+  end
+  object Label7: TLabel
+    Left = 560
+    Height = 15
+    Top = 200
+    Width = 34
+    Caption = 'Label7'
+  end
+  object Label8: TLabel
+    Left = 560
+    Height = 15
+    Top = 224
+    Width = 34
+    Caption = 'Label8'
+  end
+  object Label9: TLabel
+    Left = 561
+    Height = 15
+    Top = 248
+    Width = 34
+    Caption = 'Label9'
+  end
+  object Label10: TLabel
+    Left = 456
+    Height = 15
+    Top = 272
+    Width = 40
+    Caption = 'Label10'
+  end
+  object Button1: TButton
+    Left = 712
+    Height = 25
+    Top = 280
+    Width = 128
+    Caption = 'Show forecast'
+    TabOrder = 9
+    OnClick = Button1Click
+  end
+end
