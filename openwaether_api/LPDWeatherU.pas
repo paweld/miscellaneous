@@ -507,7 +507,7 @@ begin
     cc := ',' + aCountryCode;
   //state code
   sc := '';
-  if (aStateCode <> '') or (SameText(aCountryCode, 'US') or SameText(aCountryCode, 'USA')) then
+  if (aStateCode <> '') and (SameText(aCountryCode, 'US') or SameText(aCountryCode, 'USA')) then
     sc := aStateCode;
   hc := TFPHttpClient.Create(nil);
   try
